@@ -674,6 +674,7 @@ footer {
   display: block;
   width: 370px;
   height: 404px;
+  overflow: hidden;
 
   background: #ffffff;
   border: 1px solid #eeeeee;
