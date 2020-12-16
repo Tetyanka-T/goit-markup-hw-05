@@ -675,7 +675,6 @@ footer {
   width: 370px;
   height: 404px;
   overflow: hidden;
-
   background: #ffffff;
   border: 1px solid #eeeeee;
   box-sizing: border-box;
@@ -715,6 +714,8 @@ footer {
 }
 .thumb-overley {
   position: relative;
+  display: block;
+  overflow: hidden;
   width: 370px;
   height: 294px;
 }
@@ -726,10 +727,13 @@ footer {
 }
 .overley {
   position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
   height: 100%;
 
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 
@@ -741,16 +745,14 @@ footer {
   letter-spacing: 0.03em;
   color: #ffffff;
   background-color: rgba(33, 150, 243, 0.9);
-  transform: translateY(0);
-  opacity: 0;
+  transform: translateY(100%);
 
   transition: transform 250ms var(--timing-function);
 }
 
-.work-item:hover .overley,
-.work-item:focus .overley {
-  opacity: 1;
-  transform: translateY(-100%);
+.card:hover .overley,
+.card:focus .overley {
+  transform: translateY(0%);
 }
 
 /* ========= END Portfolio =======*/
